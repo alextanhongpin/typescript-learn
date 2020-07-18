@@ -27,3 +27,23 @@ All the painful typescript types
   const handleRedirect = (evt: React.MouseEvent<HTMLSpanElement>) => 
     history.replace(evt.currentTarget.dataset.link);
 ```
+
+
+## React FC
+
+```ts
+import React from 'react';
+
+interface Props {
+  col: number;
+}
+
+const View: React.FC<Props> = ({ col = 1, children }) => {
+  const styles = {
+    width: `${80 * i}px`,
+  };
+  return <div styles={styles}>{children}</div>;
+};
+
+export default View;
+```
