@@ -20,3 +20,10 @@ All the painful typescript types
     }));
   };
 ```
+
+## React Input resolving Dataset
+
+```ts
+  const handleRedirect = (evt: React.MouseEvent<HTMLSpanElement>) => 
+    history.replace(evt.currentTarget.dataset.link);
+```
