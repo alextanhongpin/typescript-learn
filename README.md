@@ -47,3 +47,26 @@ const View: React.FC<Props> = ({ col = 1, children }) => {
 
 export default View;
 ```
+
+## Extending React.CSSProperties
+
+Sometimes, we want to inject custom CSS variables to a class, e.g.
+```css
+/* Using css.modules */
+.someClass {
+  --row: 1
+  grid-row: var(--row);
+}
+```
+
+```js
+type EnhancedProperties = React.CSSProperties & {
+  '--row': number;
+};
+
+const style={
+  '--row': 1
+}
+
+return <div style={style} className={styles.someClass}>...</div>
+```
