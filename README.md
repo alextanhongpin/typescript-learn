@@ -70,3 +70,13 @@ const style={
 
 return <div style={style} className={styles.someClass}>...</div>
 ```
+
+## Typescript enum from array
+
+Allows enums to be enumerated:
+
+```ts
+const  MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+type Month = typeof MONTHS[number]
+```
